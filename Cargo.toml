@@ -1,0 +1,32 @@
+[package]
+name = "punini"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# --- Dependencies ---
+# --- Error Handling ---
+anyhow = "1.0"
+
+# --- Audio Engine (Lossless Support) ---
+# Menggunakan symphonia under-the-hood untuk support FLAC/MP3/WAV
+rodio = { version = "0.19", default-features = false, features = ["symphonia-all"] }
+
+# --- Metadata Extraction ---
+# Lofty adalah library terbaik di Rust untuk baca tag & cover art
+lofty = "0.21"
+
+# --- UI & Image Rendering (Persiapan Phase UI) ---
+
+ratatui = "0.29"
+ratatui-image = { version = "1.0", features = ["crossterm"] }
+crossterm = "0.28"
+image = "0.25"
+
+# --- Async & System ---
+tokio = { version = "1.40", features = ["full"] }
+regex = "1.12.2"
+
+# ... dependensi lain tetap sama ...
+
+# ...
